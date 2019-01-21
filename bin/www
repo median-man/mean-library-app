@@ -7,6 +7,7 @@
 var app = require('../app');
 var debug = require('debug')('mean-library-app:server');
 var http = require('http');
+require('../database').connect();
 
 /**
  * Get port from environment and store in Express.

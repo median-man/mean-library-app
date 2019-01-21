@@ -12,6 +12,7 @@ Currently in the process of developing the app.
 ## Libraries and Applications Used
 
 - MongoDB
+- Mongoose DRM
 - Express.js
 - Angular
 - NodeJS
