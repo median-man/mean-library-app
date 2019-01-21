@@ -1,9 +1,13 @@
-var express = require('express');
-var router = express.Router();
+var express = require('express')
+var router = express.Router()
 
 const authors = require('../authors')
+const books = require('../books')
 
-router.get('/authors', authors.getAuthors);
+router.get('/authors', authors.getAuthors)
 router.post('/authors', authors.addAuthor)
 
-module.exports = router;
+router.get('/books', books.getBooks)
+router.post('/books', books.addBook)
+
+module.exports = router
