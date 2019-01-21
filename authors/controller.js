@@ -17,4 +17,15 @@ async function addAuthor(req, res, next) {
   }
 }
 
-module.exports = { getAuthors, addAuthor }
+async function findAuthorById(req, res, next) {
+  const { id } = req.params
+  try {
+    const author = await Author.findById(id)
+    return res.json(author)
+  } catch(error) {
+    // #TODO - implement error handling
+    return next(error)
+  }
+}
+
+module.exports = { getAuthors, addAuthor, findAuthorById }
