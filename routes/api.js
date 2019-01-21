@@ -4,10 +4,7 @@ var router = express.Router()
 const authors = require('../authors')
 const books = require('../books')
 
-router.get('/authors', authors.getAuthors)
-router.post('/authors', authors.addAuthor)
-
-router.get('/books', books.getBooks)
-router.post('/books', books.addBook)
+router.use('/authors', authors.routes)
+router.use('/books', books.routes)
 
 module.exports = router
